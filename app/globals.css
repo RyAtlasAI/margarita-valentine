@@ -1,243 +1,243 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-@layer utilities {
-  /* Neon Glow Effects */
-  .neon-text-glow {
-    text-shadow: 
-      0 0 10px rgba(236, 72, 153, 0.8),
-      0 0 20px rgba(236, 72, 153, 0.6),
-      0 0 30px rgba(236, 72, 153, 0.4),
-      0 0 40px rgba(236, 72, 153, 0.2),
-      0 0 70px rgba(236, 72, 153, 0.1);
-  }
+/* Custom Neon Glow Effects */
+.neon-text-glow {
+  text-shadow: 
+    0 0 10px rgba(236, 72, 153, 0.8),
+    0 0 20px rgba(236, 72, 153, 0.6),
+    0 0 30px rgba(236, 72, 153, 0.4),
+    0 0 40px rgba(236, 72, 153, 0.2),
+    0 0 70px rgba(236, 72, 153, 0.1);
+}
 
-  .neon-text-glow-intense {
-    text-shadow: 
-      0 0 20px rgba(236, 72, 153, 1),
-      0 0 40px rgba(236, 72, 153, 0.8),
-      0 0 60px rgba(236, 72, 153, 0.6),
-      0 0 80px rgba(236, 72, 153, 0.4),
-      0 0 120px rgba(236, 72, 153, 0.2);
-  }
+.neon-text-glow-intense {
+  text-shadow: 
+    0 0 20px rgba(236, 72, 153, 1),
+    0 0 40px rgba(236, 72, 153, 0.8),
+    0 0 60px rgba(236, 72, 153, 0.6),
+    0 0 80px rgba(236, 72, 153, 0.4),
+    0 0 120px rgba(236, 72, 153, 0.2);
+}
 
-  .neon-text-pink {
-    text-shadow: 
-      0 0 10px rgba(251, 113, 133, 0.8),
-      0 0 20px rgba(251, 113, 133, 0.5),
-      0 0 30px rgba(251, 113, 133, 0.3);
-  }
+.neon-text-pink {
+  text-shadow: 
+    0 0 10px rgba(251, 113, 133, 0.8),
+    0 0 20px rgba(251, 113, 133, 0.5),
+    0 0 30px rgba(251, 113, 133, 0.3);
+}
 
-  .neon-text-subtle {
-    text-shadow: 
-      0 0 5px rgba(251, 207, 232, 0.6),
-      0 0 10px rgba(251, 207, 232, 0.4);
-  }
+.neon-text-subtle {
+  text-shadow: 
+    0 0 5px rgba(251, 207, 232, 0.6),
+    0 0 10px rgba(251, 207, 232, 0.4);
+}
 
-  .neon-button-glow {
-    box-shadow: 
-      0 0 20px rgba(236, 72, 153, 0.6),
-      0 0 40px rgba(236, 72, 153, 0.4),
-      0 0 60px rgba(236, 72, 153, 0.2),
-      inset 0 0 20px rgba(255, 255, 255, 0.1);
-  }
+.neon-button-glow {
+  box-shadow: 
+    0 0 20px rgba(236, 72, 153, 0.6),
+    0 0 40px rgba(236, 72, 153, 0.4),
+    0 0 60px rgba(236, 72, 153, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
 
-  .neon-button-glow-intense {
-    box-shadow: 
-      0 0 30px rgba(236, 72, 153, 1),
-      0 0 60px rgba(236, 72, 153, 0.8),
-      0 0 90px rgba(236, 72, 153, 0.6),
-      0 0 120px rgba(236, 72, 153, 0.4),
-      inset 0 0 30px rgba(255, 255, 255, 0.2);
-  }
+.neon-button-glow-intense {
+  box-shadow: 
+    0 0 30px rgba(236, 72, 153, 1),
+    0 0 60px rgba(236, 72, 153, 0.8),
+    0 0 90px rgba(236, 72, 153, 0.6),
+    0 0 120px rgba(236, 72, 153, 0.4),
+    inset 0 0 30px rgba(255, 255, 255, 0.2);
+}
 
-  /* Animations */
-  @keyframes float-heart {
-    0% {
-      transform: translateY(100vh) rotate(0deg);
-      opacity: 0;
-    }
-    10% {
-      opacity: 0.7;
-    }
-    90% {
-      opacity: 0.7;
-    }
-    100% {
-      transform: translateY(-100vh) rotate(360deg);
-      opacity: 0;
-    }
-  }
+.bg-gradient-radial {
+  background-image: radial-gradient(var(--tw-gradient-stops));
+}
 
-  @keyframes confetti {
-    0% {
-      transform: translateY(-100vh) rotate(0deg);
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    90% {
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh) rotate(720deg);
-      opacity: 0;
-    }
+/* Animations */
+@keyframes float-heart {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
   }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
 
-  @keyframes twinkle {
-    0%, 100% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    50% {
-      opacity: 1;
-      transform: scale(1);
-    }
+@keyframes confetti {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 0;
   }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-      transform: scale(0.9);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+@keyframes twinkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0);
   }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-  @keyframes fade-in-delayed {
-    0%, 40% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
   }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 
-  @keyframes pulse-glow {
-    0%, 100% {
-      filter: brightness(1);
-      transform: scale(1);
-    }
-    50% {
-      filter: brightness(1.2);
-      transform: scale(1.02);
-    }
+@keyframes fade-in-delayed {
+  0%, 40% {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  @keyframes pulse-button {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.05);
-    }
+@keyframes pulse-glow {
+  0%, 100% {
+    filter: brightness(1);
+    transform: scale(1);
   }
+  50% {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+}
 
-  @keyframes pulse-slow {
-    0%, 100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-    50% {
-      opacity: 0.7;
-      transform: scale(1.1);
-    }
+@keyframes pulse-button {
+  0%, 100% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(1.05);
+  }
+}
 
-  @keyframes bounce-slow {
-    0%, 100% {
-      transform: translateY(0);
-    }
-    50% {
-      transform: translateY(-30px);
-    }
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
   }
+  50% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
 
-  @keyframes bounce-celebration {
-    0%, 100% {
-      transform: translateY(0) scale(1);
-    }
-    50% {
-      transform: translateY(-50px) scale(1.1);
-    }
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
   }
+  50% {
+    transform: translateY(-30px);
+  }
+}
 
-  @keyframes spin-slow {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+@keyframes bounce-celebration {
+  0%, 100% {
+    transform: translateY(0) scale(1);
   }
+  50% {
+    transform: translateY(-50px) scale(1.1);
+  }
+}
 
-  @keyframes celebration {
-    0% {
-      opacity: 0;
-      transform: scale(0.5) rotate(-10deg);
-    }
-    50% {
-      transform: scale(1.1) rotate(5deg);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1) rotate(0deg);
-    }
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
-  /* Apply animations */
-  .animate-float-heart {
-    animation: float-heart linear infinite;
+@keyframes celebration {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
   }
+  50% {
+    transform: scale(1.1) rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
 
-  .animate-confetti {
-    animation: confetti ease-in infinite;
-  }
+/* Apply animations */
+.animate-float-heart {
+  animation: float-heart linear infinite;
+}
 
-  .animate-twinkle {
-    animation: twinkle 3s ease-in-out infinite;
-  }
+.animate-confetti {
+  animation: confetti ease-in infinite;
+}
 
-  .animate-fade-in {
-    animation: fade-in 1.5s ease-out;
-  }
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+}
 
-  .animate-fade-in-delayed {
-    animation: fade-in-delayed 4s ease-out;
-  }
+.animate-fade-in {
+  animation: fade-in 1.5s ease-out;
+}
 
-  .animate-pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
-  }
+.animate-fade-in-delayed {
+  animation: fade-in-delayed 4s ease-out;
+}
 
-  .animate-pulse-button {
-    animation: pulse-button 2s ease-in-out infinite;
-  }
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
 
-  .animate-pulse-slow {
-    animation: pulse-slow 3s ease-in-out infinite;
-  }
+.animate-pulse-button {
+  animation: pulse-button 2s ease-in-out infinite;
+}
 
-  .animate-bounce-slow {
-    animation: bounce-slow 2s ease-in-out infinite;
-  }
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
 
-  .animate-bounce-celebration {
-    animation: bounce-celebration 2s ease-in-out infinite;
-  }
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
 
-  .animate-spin-slow {
-    animation: spin-slow 4s linear infinite;
-  }
+.animate-bounce-celebration {
+  animation: bounce-celebration 2s ease-in-out infinite;
+}
 
-  .animate-celebration {
-    animation: celebration 1s ease-out;
-  }
+.animate-spin-slow {
+  animation: spin-slow 4s linear infinite;
+}
+
+.animate-celebration {
+  animation: celebration 1s ease-out;
 }
